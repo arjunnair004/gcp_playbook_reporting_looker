@@ -104,6 +104,7 @@ view: customer_transactions {
   measure: shipping_cost {
     type: sum
     sql: ${TABLE}.ShippingCost ;;
+    value_format_name: usd
   }
 
   dimension: state {
