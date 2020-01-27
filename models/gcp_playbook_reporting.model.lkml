@@ -11,5 +11,3 @@ datagroup: gcp_playbook_reporting_default_datagroup {
 persist_with: gcp_playbook_reporting_default_datagroup
 
 explore: customer_transactions {}
-
-explore: customer_transactions_vw {}
