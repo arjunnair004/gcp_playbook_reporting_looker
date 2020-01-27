@@ -23,7 +23,7 @@ view: customer_transactions {
     sql: ${TABLE}.CustomerName ;;
   }
 
-  dimension: discount {
+  measure: discount {
     type: number
     sql: ${TABLE}.Discount ;;
   }
@@ -53,12 +53,12 @@ view: customer_transactions {
     sql: ${TABLE}.ProductName ;;
   }
 
-  dimension: profit {
+  measure: profit {
     type: number
     sql: ${TABLE}.Profit ;;
   }
 
-  dimension: quantity {
+  measure: quantity {
     type: number
     sql: ${TABLE}.Quantity ;;
   }
@@ -68,7 +68,7 @@ view: customer_transactions {
     sql: ${TABLE}.Region ;;
   }
 
-  dimension: sales {
+  measure: sales {
     type: number
     sql: ${TABLE}.Sales ;;
   }
@@ -98,7 +98,7 @@ view: customer_transactions {
     sql: ${TABLE}.ShipMode ;;
   }
 
-  dimension: shipping_cost {
+  measure: shipping_cost {
     type: number
     sql: ${TABLE}.ShippingCost ;;
   }
