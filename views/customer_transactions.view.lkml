@@ -40,6 +40,10 @@ view: customer_transactions {
     sql: ${TABLE}.CustomerName ;;
   }
 
+measure: customer_count {
+  type: count_distinct
+  sql: ${TABLE}.customer_name ;;
+}
 
   dimension: market {
     type: string
