@@ -26,6 +26,7 @@ view: customer_transactions {
   measure: discount {
     type: sum
     sql: ${TABLE}.Discount ;;
+    value_format_name: usd
   }
 
   dimension: market {
@@ -56,6 +57,7 @@ view: customer_transactions {
   measure: profit {
     type: sum
     sql: ${TABLE}.Profit ;;
+    value_format_name: usd
   }
 
   measure: quantity {
@@ -71,6 +73,7 @@ view: customer_transactions {
   measure: sales {
     type: sum
     sql: ${TABLE}.Sales ;;
+    value_format_name: usd
   }
 
   dimension: segment {
