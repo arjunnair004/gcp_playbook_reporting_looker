@@ -44,7 +44,7 @@ measure: customer_count {
   group_item_label: "Customer Details"
   description: "Provides count of distinct customers"
   type: count_distinct
-  sql: ${TABLE}.customer_name ;;
+  sql: ${customer_name} ;;
 }
 
   dimension: market {
