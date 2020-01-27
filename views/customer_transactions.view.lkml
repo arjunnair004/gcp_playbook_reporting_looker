@@ -2,13 +2,13 @@ view: customer_transactions {
   sql_table_name: gcp_playbook_reporting.customer_transactions ;;
 
   dimension: category {
-    group_label: "Category"
+    group_label: "Order Category"
     type: string
     sql: ${TABLE}.Category ;;
   }
 
   dimension: sub_category {
-  group_label: "Category"
+  group_label: "Order Category"
     type: string
     sql: ${TABLE}.SubCategory ;;
   }
