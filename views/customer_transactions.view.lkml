@@ -24,7 +24,7 @@ view: customer_transactions {
   }
 
   measure: discount {
-    type: number
+    type: sum
     sql: ${TABLE}.Discount ;;
   }
 
@@ -54,12 +54,12 @@ view: customer_transactions {
   }
 
   measure: profit {
-    type: number
+    type: sum
     sql: ${TABLE}.Profit ;;
   }
 
   measure: quantity {
-    type: number
+    type: sum
     sql: ${TABLE}.Quantity ;;
   }
 
@@ -69,7 +69,7 @@ view: customer_transactions {
   }
 
   measure: sales {
-    type: number
+    type: sum
     sql: ${TABLE}.Sales ;;
   }
 
@@ -99,7 +99,7 @@ view: customer_transactions {
   }
 
   measure: shipping_cost {
-    type: number
+    type: sum
     sql: ${TABLE}.ShippingCost ;;
   }
 
