@@ -84,7 +84,7 @@ view: customer_transactions {
   }
 
   dimension: segment {
-    group_label: "Billing details"
+    group_label: "Customer Details"
     type: string
     sql: ${TABLE}.Segment ;;
   }
