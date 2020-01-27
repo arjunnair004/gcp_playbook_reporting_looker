@@ -90,7 +90,7 @@ view: customer_transactions {
   }
 
   dimension_group: ship {
-    group_label: "Shipping"
+
     type: time
     timeframes: [
       raw,
