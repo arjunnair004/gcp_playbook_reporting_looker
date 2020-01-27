@@ -16,12 +16,14 @@ view: customer_transactions {
   }
 
   dimension: city {
+    group_label: "Billing address"
     type: string
     sql: ${TABLE}.City ;;
     map_layer_name: us_counties_fips
   }
 
   dimension: country {
+    group_label: "Billing address"
     type: string
     map_layer_name: countries
     sql: ${TABLE}.Country ;;
@@ -75,6 +77,7 @@ view: customer_transactions {
   }
 
   dimension: region {
+    group_label: "Billing address"
     type: string
     sql: ${TABLE}.Region ;;
   }
@@ -117,6 +120,7 @@ view: customer_transactions {
   }
 
   dimension: state {
+    group_label: "Billing address"
     type: string
     sql: ${TABLE}.State ;;
   }
