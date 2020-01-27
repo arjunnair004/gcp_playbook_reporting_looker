@@ -10,7 +10,7 @@ view: customer_transactions {
 
 
   dimension: sub_category {
-  group_item_label: "Category"
+  group_label: "Category"
     type: string
     sql: ${TABLE}.SubCategory ;;
   }
