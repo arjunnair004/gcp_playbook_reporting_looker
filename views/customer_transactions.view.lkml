@@ -9,6 +9,7 @@ view: customer_transactions {
   dimension: city {
     type: string
     sql: ${TABLE}.City ;;
+    map_layer_name: us_counties_fips
   }
 
   dimension: country {
