@@ -90,6 +90,7 @@ view: customer_transactions {
   }
 
   dimension_group: ship {
+    group_label: "Shipping"
     type: time
     timeframes: [
       raw,
@@ -105,11 +106,13 @@ view: customer_transactions {
   }
 
   dimension: ship_mode {
+    group_label: "Shipping"
     type: string
     sql: ${TABLE}.ShipMode ;;
   }
 
   measure: shipping_cost {
+    group_label: "Shipping"
     type: sum
     sql: ${TABLE}.ShippingCost ;;
     value_format_name: usd
