@@ -41,6 +41,7 @@ view: customer_transactions {
   }
 
 measure: customer_count {
+  group_label: "Customer Details"
   description: "Provides count of distinct customers"
   type: count_distinct
   sql: ${TABLE}.customer_name ;;
