@@ -7,8 +7,6 @@ view: customer_transactions {
     sql: ${TABLE}.Category ;;
   }
 
-
-
   dimension: sub_category {
   group_label: "Category"
     type: string
@@ -16,29 +14,32 @@ view: customer_transactions {
   }
 
   dimension: city {
-    group_label: "Billing address"
+    group_label: "Billing details"
     type: string
     sql: ${TABLE}.City ;;
     map_layer_name: us_counties_fips
   }
 
   dimension: country {
-    group_label: "Billing address"
+    group_label: "Billing details"
     type: string
     map_layer_name: countries
     sql: ${TABLE}.Country ;;
   }
 
+
+  dimension: state {
+    group_label: "Billing details"
+    type: string
+    sql: ${TABLE}.State ;;
+  }
+
   dimension: customer_name {
+    group_label: "Customer Details"
     type: string
     sql: ${TABLE}.CustomerName ;;
   }
 
-  measure: discount {
-    type: sum
-    sql: ${TABLE}.Discount ;;
-    value_format_name: usd
-  }
 
   dimension: market {
     type: string
@@ -77,18 +78,13 @@ view: customer_transactions {
   }
 
   dimension: region {
-    group_label: "Billing address"
+    group_label: "Billing details"
     type: string
     sql: ${TABLE}.Region ;;
   }
 
-  measure: sales {
-    type: sum
-    sql: ${TABLE}.Sales ;;
-    value_format_name: usd
-  }
-
   dimension: segment {
+    group_label: "Billing details"
     type: string
     sql: ${TABLE}.Segment ;;
   }
@@ -119,11 +115,20 @@ view: customer_transactions {
     value_format_name: usd
   }
 
-  dimension: state {
-    group_label: "Billing address"
-    type: string
-    sql: ${TABLE}.State ;;
+
+  measure: discount {
+    type: sum
+    sql: ${TABLE}.Discount ;;
+    value_format_name: usd
   }
+
+
+  measure: sales {
+    type: sum
+    sql: ${TABLE}.Sales ;;
+    value_format_name: usd
+  }
+
 
   measure: count {
     type: count
