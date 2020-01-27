@@ -2,8 +2,17 @@ view: customer_transactions {
   sql_table_name: gcp_playbook_reporting.customer_transactions ;;
 
   dimension: category {
+    group_label: "Category"
     type: string
     sql: ${TABLE}.Category ;;
+  }
+
+
+
+  dimension: sub_category {
+  group_item_label: "Category"
+    type: string
+    sql: ${TABLE}.SubCategory ;;
   }
 
   dimension: city {
@@ -110,11 +119,6 @@ view: customer_transactions {
   dimension: state {
     type: string
     sql: ${TABLE}.State ;;
-  }
-
-  dimension: sub_category {
-    type: string
-    sql: ${TABLE}.SubCategory ;;
   }
 
   measure: count {
