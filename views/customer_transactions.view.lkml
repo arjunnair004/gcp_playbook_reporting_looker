@@ -1,4 +1,7 @@
+include: "customer_transactions_test.view.lkml"
+
 view: customer_transactions {
+  extends: [customer_transactions_test]
   sql_table_name: gcp_playbook_reporting.customer_transactions ;;
 
   dimension: category {
