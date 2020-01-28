@@ -15,6 +15,7 @@ explore: customer_transactions {
   }
 
 explore: customer_transactions_test {
+  hidden: yes
   extends: [customer_transactions_test]
   view_label: "Order Information"
   # The additional things you want to add or change
