@@ -3,7 +3,7 @@ connection: "gcp_playbook_looker_bq"
 # include all the views
 include: "/views/**/*.view"
 
-
+include: "base.lkml"
 
 datagroup: gcp_playbook_reporting_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
