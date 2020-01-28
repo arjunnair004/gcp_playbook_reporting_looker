@@ -14,4 +14,9 @@ persist_with: gcp_playbook_reporting_default_datagroup
 
 explore: customer_transactions {
   label:"Customer Transaction Details"
+  join:customer_transactions_test  {
+    type: left_outer
+    sql_on: ${customer_transactions.customer_name}=${customer_transactions_test.customer_name} ;;
+    relationship: many_to_one
+  }
   }
