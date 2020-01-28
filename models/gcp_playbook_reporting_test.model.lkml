@@ -1,6 +1,6 @@
 connection: "gcp_playbook_reporting_test"
 
-include: "/views/*.view.lkml"                # include all views in the views/ folder in this project
+include: "*.view.lkml"                # include all views in the views/ folder in this project
 
 
 datagroup: gcp_playbook_reporting_default_datagroup {
