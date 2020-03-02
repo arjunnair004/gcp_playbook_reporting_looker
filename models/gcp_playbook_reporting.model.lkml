@@ -13,6 +13,6 @@ datagroup: gcp_playbook_reporting_default_datagroup {
 persist_with: gcp_playbook_reporting_default_datagroup
 
 explore: customer_transactions {
-  label:"Arjun"
+  label:"Customer Transaction Details"
 
   }
